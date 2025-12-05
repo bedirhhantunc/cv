@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="tr" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedirhan Tunç - Portfolio CV</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Bedirhan Tunç - Visual Communication Designer & AI Software Specialist with 3+ years of experience. Expert in Adobe Creative Suite, Figma, AI tools and team leadership.">
+    <meta name="keywords" content="Bedirhan Tunç, Visual Communication Designer, Graphic Designer, AI Specialist, UI/UX Designer, Adobe Photoshop, Illustrator, Figma, Team Leader, QA Specialist">
+    <meta name="author" content="Bedirhan Tunç">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Bedirhan Tunç - Visual Communication Designer & AI Software Specialist">
+    <meta property="og:description" content="Creative professional with 3+ years experience in visual design and AI technologies. 15+ successful projects, 2,500+ users reached.">
+    <meta property="og:url" content="https://bedirhhantunc.github.io/portfolio-website/">
+    <meta property="og:image" content="https://bedirhhantunc.github.io/portfolio-website/og-image.jpg">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bedirhan Tunç - Visual Communication Designer & AI Software Specialist">
+    <meta name="twitter:description" content="Creative professional with 3+ years experience in visual design and AI technologies. 15+ successful projects.">
+    <meta name="twitter:image" content="https://bedirhhantunc.github.io/portfolio-website/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        :root {
+            /* Light Mode Colors - Dark Blue Navy Theme (Default) */
+            --primary-dark: #2d3436;
+            --primary-blue: #0984e3;
+            --primary-light: #74b9ff;
+            --accent-blue: #0056b3;
+
+            --bg-body: linear-gradient(135deg, #2d3436 0%, #0984e3 100%);
+            --bg-container: white;
+            --bg-header: linear-gradient(135deg, #2d3436 0%, #0984e3 100%);
+            --bg-sidebar: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            --bg-summary: linear-gradient(135deg, #e8f4f8 0%, #b8daff 100%);
+            --bg-card: white;
+            --bg-stat: linear-gradient(135deg, #2d3436 0%, #0984e3 100%);
+
+            --text-primary: #333;
+            --text-secondary: #555;
+            --text-light: #666;
+            --text-white: white;
+
+            --border-color: #f0f0f0;
+            --skill-bg: #e0e0e0;
+
+            --gradient-main: linear-gradient(90deg, #2d3436, #0984e3);
+        }
+
+        /* Green Theme */
+        body.theme-green {
+            --primary-dark: #27ae60;
+            --primary-blue: #2ecc71;
+            --primary-light: #55efc4;
+            --accent-blue: #00b894;
+
+            --bg-body: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            --bg-header: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            --bg-summary: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
+            --bg-stat: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            --gradient-main: linear-gradient(90deg, #27ae60, #2ecc71);
+        }
+
+        /* Purple Theme */
+        body.theme-purple {
+            --primary-dark: #6c5ce7;
+            --primary-blue: #a29bfe;
+            --primary-light: #dfe6e9;
+            --accent-blue: #5f27cd;
+
+            --bg-body: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+            --bg-header: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+            --bg-summary: linear-gradient(135deg, #f5f3ff 0%, #e5d9f2 100%);
+            --bg-stat: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+            --gradient-main: linear-gradient(90deg, #6c5ce7, #a29bfe);
+        }
+
+        /* Red Theme */
+        body.theme-red {
+            --primary-dark: #d63031;
+            --primary-blue: #ff7675;
+            --primary-light: #fab1a0;
+            --accent-blue: #e17055;
+
+            --bg-body: linear-gradient(135deg, #d63031 0%, #ff7675 100%);
+            --bg-header: linear-gradient(135deg, #d63031 0%, #ff7675 100%);
+            --bg-summary: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            --bg-stat: linear-gradient(135deg, #d63031 0%, #ff7675 100%);
+            --gradient-main: linear-gradient(90deg, #d63031, #ff7675);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateZ(0); /* Force GPU acceleration */
+        }
+
+        .animate-on-scroll.animated {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* GPU Acceleration for animations */
+        @keyframes fadeInUp,
+        @keyframes fadeIn,
+        @keyframes slideInLeft,
+        @keyframes slideInRight {
+            transform: translateZ(0);
+        }
+
+        body.dark-mode {
+            /* Dark Mode Colors */
+            --bg-body: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --bg-container: #0f1419;
+            --bg-header: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            --bg-sidebar: linear-gradient(180deg, #1a1d29 0%, #252a3a 100%);
+            --bg-summary: linear-gradient(135deg, #1f4068 0%, #162447 100%);
+            --bg-card: #1a1d29;
+            --bg-stat: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+
+            --text-primary: #e4e4e7;
+            --text-secondary: #d4d4d8;
+            --text-light: #a1a1aa;
+            --text-white: white;
+
+            --border-color: #2d3748;
+            --skill-bg: #2d3748;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Performance Optimizations */
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-body);
+            padding: 30px 20px;
+            min-height: 100vh;
+            transition: background 0.3s ease;
+        }
+
+        /* Toggle Buttons Container */
+        .toggle-buttons {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        /* Color Theme Picker - Minimalist Design */
+        .color-picker-container {
+            position: relative;
+        }
+
+        .color-toggle-btn {
+            background: var(--bg-card);
+            border: 2px solid var(--primary-blue);
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--primary-blue);
+        }
+
+        .color-toggle-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(9, 132, 227, 0.4);
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .color-toggle-btn:active {
+            transform: scale(0.95);
+        }
+
+        .color-picker {
+            position: absolute;
+            top: 55px;
+            right: 0;
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            background: var(--bg-card);
+            padding: 10px;
+            border-radius: 15px;
+            border: 2px solid var(--primary-blue);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .color-picker.show {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .color-option {
+            width: 35px;
+            height: 35px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .color-option.active::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .color-option.blue { background: linear-gradient(135deg, #2d3436, #0984e3); }
+        .color-option.green { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .color-option.purple { background: linear-gradient(135deg, #6c5ce7, #a29bfe); }
+        .color-option.red { background: linear-gradient(135deg, #d63031, #ff7675); }
+
+        /* Toggle Button Base Style */
+        .toggle-btn {
+            background: var(--bg-card);
+            border: 2px solid var(--primary-blue);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(9, 132, 227, 0.4);
+        }
+
+        .toggle-btn,
+        .color-toggle-btn,
+        .color-option,
+        .experience-card,
+        .stat-card,
+        .tool-badge,
+        .tag {
+            will-change: transform;
+        }
+
+        /* Ripple Effect */
+        .toggle-btn,
+        .color-toggle-btn,
+        .pdf-btn,
+        .portfolio-link {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: ripple-animation 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        /* PDF Download Button */
+        .pdf-btn {
+            color: var(--primary-blue);
+            position: relative;
+        }
+
+        .pdf-btn:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .pdf-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Accessibility - Focus Styles */
+        button:focus-visible,
+        a:focus-visible,
+        .color-option:focus-visible {
+            outline: 3px solid var(--primary-blue);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(9, 132, 227, 0.2);
+        }
+
+        .toggle-btn:focus-visible,
+        .color-toggle-btn:focus-visible {
+            outline: 3px solid var(--primary-light);
+            outline-offset: 2px;
+        }
+
+        .cv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--bg-container);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: background 0.3s ease;
+        }
+
+        /* Header Section */
+        .header {
+            background: var(--bg-header);
+            color: var(--text-white);
+            padding: 60px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            transform: translate(-30%, 30%);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .name {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .tagline {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.15);
+            padding: 12px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .contact-item:hover .contact-icon {
+            animation: bounce 0.5s ease;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .contact-icon {
+            font-size: 20px;
+        }
+
+        .contact-item a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--bg-sidebar);
+            padding: 50px 40px;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient-main);
+            border-radius: 2px;
+        }
+
+        /* Skills with Progress Bars */
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill-level {
+            font-size: 12px;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: var(--skill-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--gradient-main);
+            border-radius: 10px;
+            transition: width 1s cubic-bezier(0.65, 0, 0.35, 1);
+            box-shadow: 0 2px 4px rgba(9, 132, 227, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* AI Tools */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .tool-badge {
+            background: var(--bg-card);
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .tool-badge:hover {
+            transform: translateY(-3px) rotate(2deg);
+            box-shadow: 0 4px 12px rgba(9, 132, 227, 0.3);
+            border-color: var(--primary-blue);
+        }
+
+        .tool-badge:active {
+            transform: translateY(-1px) rotate(0deg);
+        }
+
+        /* Languages */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .language-item:last-child {
+            border-bottom: none;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .language-badge {
+            background: var(--gradient-main);
+            color: var(--text-white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* Main Content Area */
+        .content-area {
+            padding: 50px;
+            background: var(--bg-container);
+            transition: background 0.3s ease;
+        }
+
+        .content-section {
+            margin-bottom: 45px;
+        }
+
+        .content-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .content-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 30px;
+            background: var(--gradient-main);
+            border-radius: 3px;
+        }
+
+        /* Professional Summary */
+        .summary-box {
+            background: var(--bg-summary);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-blue);
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: background 0.3s ease;
+        }
+
+        /* Experience Items */
+        .experience-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient-main);
+        }
+
+        .experience-card:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 8px 25px rgba(9, 132, 227, 0.2);
+            transform: translateX(5px) translateY(-2px);
+        }
+
+        .experience-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(9, 132, 227, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .experience-card:hover::after {
+            opacity: 1;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+
+        .exp-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .exp-company {
+            font-size: 15px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .exp-date {
+            background: var(--gradient-main);
+            color: var(--text-white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .exp-description ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .exp-description li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .exp-description li::before {
+            content: '▹';
+            position: absolute;
+            left: -10px;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--bg-stat);
+            color: var(--text-white);
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(9, 132, 227, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(9, 132, 227, 0.4);
+        }
+
+        .stat-card:hover .stat-number {
+            animation: pulse 0.6s ease;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* Expertise Tags */
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            border-color: var(--primary-blue);
+            transform: scale(1.05) rotate(-2deg);
+            background: var(--gradient-main);
+            color: var(--text-white);
+            box-shadow: 0 4px 12px rgba(9, 132, 227, 0.3);
+        }
+
+        .tag:active {
+            transform: scale(0.98) rotate(0deg);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-dark);
+            color: var(--text-white);
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-blue);
+        }
+
+        .portfolio-link {
+            background: var(--gradient-main);
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 25px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            color: var(--text-white) !important;
+        }
+
+        .portfolio-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(9, 132, 227, 0.4);
+        }
+
+        /* Print Styles */
+        @page {
+            margin: 0;
+            size: A4 portrait;
+        }
+
+        @media print {
+            body {
+                zoom: 0.55;
+                margin: 0;
+                padding: 0;
+            }
+
+            .toggle-buttons {
+                display: none !important;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .header::before,
+            .header::after {
+                display: none;
+            }
+
+            .skill-progress::after {
+                display: none;
+            }
+
+            *, *::before, *::after {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .toggle-buttons {
+                top: 15px;
+                right: 15px;
+                gap: 8px;
+            }
+
+            .toggle-btn, .color-toggle-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .color-picker {
+                top: 50px;
+            }
+
+            .color-option {
+                width: 32px;
+                height: 32px;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                padding: 30px 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .header {
+                padding: 40px 25px;
+            }
+
+            .name {
+                font-size: 36px;
+            }
+
+            .tagline {
+                font-size: 18px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-area {
+                padding: 30px 25px;
+            }
+
+            .content-title {
+                font-size: 22px;
+            }
+
+            .exp-header {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .exp-date {
+                margin-top: 10px;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px 5px;
+            }
+
+            .toggle-buttons {
+                top: 10px;
+                right: 10px;
+                gap: 6px;
+                flex-wrap: wrap;
+                max-width: 120px;
+            }
+
+            .toggle-btn, .color-toggle-btn, .pdf-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .name {
+                font-size: 28px;
+            }
+
+            .tagline {
+                font-size: 16px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .contact-item {
+                font-size: 13px;
+            }
+
+            .sidebar {
+                padding: 25px 20px;
+            }
+
+            .content-area {
+                padding: 25px 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+
+            .content-title {
+                font-size: 20px;
+            }
+
+            .exp-title {
+                font-size: 18px;
+            }
+
+            .summary-box {
+                padding: 20px;
+                font-size: 14px;
+            }
+
+            .expertise-tags {
+                gap: 8px;
+            }
+
+            .tag {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Toggle Buttons -->
+    <div class="toggle-buttons">
+        <!-- PDF Download Button -->
+        <button class="toggle-btn pdf-btn" onclick="downloadPDF()" title="Download as PDF" aria-label="Download CV as PDF">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+        </button>
+
+        <!-- Color Theme Picker Dropdown -->
+        <div class="color-picker-container">
+            <button class="color-toggle-btn" onclick="toggleColorPicker()" title="Change Theme Color" aria-label="Change color theme" aria-expanded="false" aria-controls="colorPicker">
+                <i class="fas fa-palette" aria-hidden="true"></i>
+            </button>
+            <div class="color-picker" id="colorPicker" role="menu" aria-label="Color theme options">
+                <button class="color-option blue active" onclick="changeTheme('blue')" title="Blue Theme" aria-label="Blue theme" role="menuitem"></button>
+                <button class="color-option green" onclick="changeTheme('green')" title="Green Theme" aria-label="Green theme" role="menuitem"></button>
+                <button class="color-option purple" onclick="changeTheme('purple')" title="Purple Theme" aria-label="Purple theme" role="menuitem"></button>
+                <button class="color-option red" onclick="changeTheme('red')" title="Red Theme" aria-label="Red theme" role="menuitem"></button>
+            </div>
+        </div>
+
+        <!-- Language Button -->
+        <button class="toggle-btn lang-toggle" onclick="toggleLanguage()" id="lang-btn" title="Change Language" aria-label="Switch language to English">EN</button>
+
+        <!-- Dark Mode Button -->
+        <button class="toggle-btn" onclick="toggleTheme()" title="Toggle Dark Mode" aria-label="Toggle dark mode" id="theme-toggle-btn">
+            <span id="theme-icon" aria-hidden="true">🌙</span>
+        </button>
+    </div>
+
+    <div class="cv-container" role="main">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="header-content">
+                <h1 class="name">BEDİRHAN TUNÇ</h1>
+                <p class="tagline" data-tr="Görsel İletişim Tasarımcı & AI Yazılım Uzmanı" data-en="Visual Communication Designer & AI Software Specialist">Görsel İletişim Tasarımcı & AI Yazılım Uzmanı</p>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
+                        <a href="mailto:tuncbedirhan07@gmail.com" aria-label="Email: tuncbedirhan07@gmail.com">tuncbedirhan07@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon" aria-hidden="true"></i>
+                        <span style="color: white;" aria-label="Phone number">+90 538 572 5325</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin contact-icon" aria-hidden="true"></i>
+                        <a href="https://www.linkedin.com/in/bedirhan-tunc/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">linkedin.com/in/bedirhan-tunc</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon" aria-hidden="true"></i>
+                        <span style="color: white;" data-tr="İstanbul, Bahçelievler" data-en="Istanbul, Bahcelievler" aria-label="Location">İstanbul, Bahçelievler</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Design Tools -->
+                <div class="sidebar-section">
+                    <h3 class="section-title" data-tr="Tasarım Araçları" data-en="Design Tools">Tasarım Araçları</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Adobe Photoshop</span>
+                            <span class="skill-level" data-tr="İleri" data-en="Advanced">İleri</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Adobe Illustrator</span>
+                            <span class="skill-level" data-tr="İleri" data-en="Advanced">İleri</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Figma</span>
+                            <span class="skill-level" data-tr="İleri" data-en="Advanced">İleri</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Adobe InDesign</span>
+                            <span class="skill-level" data-tr="İleri" data-en="Advanced">İleri</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>After Effects</span>
+                            <span class="skill-level" data-tr="İyi" data-en="Good">İyi</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Tools -->
+                <div class="sidebar-section">
+                    <h3 class="section-title" data-tr="AI Araçları" data-en="AI Tools">AI Araçları</h3>
+                    <div class="tool-grid">
+                        <div class="tool-badge">Claude AI</div>
+                        <div class="tool-badge">ChatGPT</div>
+                        <div class="tool-badge">Midjourney</div>
+                        <div class="tool-badge">AI Studio</div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="sidebar-section">
+                    <h3 class="section-title" data-tr="Diller" data-en="Languages">Diller</h3>
+                    <div class="language-item">
+                        <span class="language-name" data-tr="Türkçe" data-en="Turkish">Türkçe</span>
+                        <span class="language-badge" data-tr="Ana Dili" data-en="Native">Ana Dili</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name" data-tr="İngilizce" data-en="English">İngilizce</span>
+                        <span class="language-badge" data-tr="İyi Seviye" data-en="Good Level">İyi Seviye</span>
+                    </div>
+                </div>
+
+                <!-- Expertise Areas -->
+                <div class="sidebar-section">
+                    <h3 class="section-title" data-tr="Uzmanlık" data-en="Expertise">Uzmanlık</h3>
+                    <div class="expertise-tags">
+                        <div class="tag">Branding</div>
+                        <div class="tag">Typography</div>
+                        <div class="tag">UI/UX</div>
+                        <div class="tag">Illustration</div>
+                        <div class="tag">QA Testing</div>
+                        <div class="tag">Team Lead</div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content-area">
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label" data-tr="Yıl Deneyim" data-en="Years Experience">Yıl Deneyim</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label" data-tr="Proje" data-en="Projects">Proje</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label" data-tr="Platform" data-en="Platforms">Platform</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2.5K+</div>
+                        <div class="stat-label" data-tr="Kullanıcı" data-en="Users">Kullanıcı</div>
+                    </div>
+                </div>
+
+                <!-- Professional Summary -->
+                <div class="content-section">
+                    <h2 class="content-title" data-tr="Profesyonel Özet" data-en="Professional Summary">Profesyonel Özet</h2>
+                    <div class="summary-box"
+                         data-tr="Görsel iletişim tasarım ve AI teknolojileri konusunda uzmanlaşmış, 3+ yıllık deneyime sahip yaratıcı profesyonel. 15+ başarılı proje teslimi ve 2,500+ kullanıcıya ulaşan dijital platformların yönetiminde kanıtlanmış başarı. Ekip liderliği, kalite güvence ve operasyon yönetimi konularında güçlü yetkinlikler. Modern tasarım araçları ve yapay zeka teknolojilerini kullanarak yenilikçi çözümler üretme kapasitesi."
+                         data-en="Creative professional specialized in visual communication design and AI technologies with 3+ years of experience. Proven success in delivering 15+ projects and managing digital platforms reaching 2,500+ users. Strong competencies in team leadership, quality assurance, and operations management. Capacity to create innovative solutions using modern design tools and artificial intelligence technologies.">
+                        Görsel iletişim tasarım ve AI teknolojileri konusunda uzmanlaşmış, 3+ yıllık deneyime sahip yaratıcı profesyonel. 15+ başarılı proje teslimi ve 2,500+ kullanıcıya ulaşan dijital platformların yönetiminde kanıtlanmış başarı. Ekip liderliği, kalite güvence ve operasyon yönetimi konularında güçlü yetkinlikler. Modern tasarım araçları ve yapay zeka teknolojilerini kullanarak yenilikçi çözümler üretme kapasitesi.
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="content-section">
+                    <h2 class="content-title" data-tr="İş Deneyimi" data-en="Work Experience">İş Deneyimi</h2>
+
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-title" data-tr="Ekip Lideri & Kalite Güvence Uzmanı" data-en="Team Leader & QA Specialist">Ekip Lideri & Kalite Güvence Uzmanı</div>
+                                <div class="exp-company">Methodor, Cokkolay & NL Cortex</div>
+                            </div>
+                            <div class="exp-date" data-tr="2025 - Günümüz" data-en="2025 - Present">2025 - Günümüz</div>
+                        </div>
+                        <div class="exp-description">
+                            <ul>
+                                <li data-tr="3 farklı dijital platform için proje koordinasyonu ve ekip yönetimi" data-en="Project coordination and team management for 3 different digital platforms">3 farklı dijital platform için proje koordinasyonu ve ekip yönetimi</li>
+                                <li data-tr="Kalite kontrol süreçlerini tasarlayarak ürün kalitesini optimize etme" data-en="Optimizing product quality by designing quality control processes">Kalite kontrol süreçlerini tasarlayarak ürün kalitesini optimize etme</li>
+                                <li data-tr="Operasyon yönetimi ile iş süreçlerinin verimliliğini artırma" data-en="Increasing business process efficiency through operations management">Operasyon yönetimi ile iş süreçlerinin verimliliğini artırma</li>
+                                <li data-tr="Çapraz fonksiyonel ekiplerle işbirliği yaparak proje başarısını sağlama" data-en="Ensuring project success through collaboration with cross-functional teams">Çapraz fonksiyonel ekiplerle işbirliği yaparak proje başarısını sağlama</li>
+                                <li data-tr="2,500+ kullanıcıya ulaşan platformların sorunsuz çalışmasını koordine etme" data-en="Coordinating smooth operation of platforms reaching 2,500+ users">2,500+ kullanıcıya ulaşan platformların sorunsuz çalışmasını koordine etme</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-title" data-tr="Yayın Editörü" data-en="Publishing Editor">Yayın Editörü</div>
+                                <div class="exp-company" data-tr="AN Yayınları" data-en="AN Publishing">AN Yayınları</div>
+                            </div>
+                            <div class="exp-date">2023 - 2024</div>
+                        </div>
+                        <div class="exp-description">
+                            <ul>
+                                <li data-tr="Kitap kapağı ve sayfa düzeni tasarımı ile görsel kimlik oluşturma" data-en="Creating visual identity through book cover and layout design">Kitap kapağı ve sayfa düzeni tasarımı ile görsel kimlik oluşturma</li>
+                                <li data-tr="Sosyal medya içerik stratejisi geliştirme ve yönetim" data-en="Developing and managing social media content strategy">Sosyal medya içerik stratejisi geliştirme ve yönetim</li>
+                                <li data-tr="Baskı ve sipariş süreçlerinin koordinasyonu ile operasyonel verimlilik" data-en="Operational efficiency through coordination of printing and ordering processes">Baskı ve sipariş süreçlerinin koordinasyonu ile operasyonel verimlilik</li>
+                                <li data-tr="Yayın süreçlerinde kalite kontrolü ve son kontrollerin yapılması" data-en="Quality control and final checks in publishing processes">Yayın süreçlerinde kalite kontrolü ve son kontrollerin yapılması</li>
+                                <li data-tr="Yazarlar ve tasarım ekibi arasında koordinasyon sağlama" data-en="Providing coordination between authors and design team">Yazarlar ve tasarım ekibi arasında koordinasyon sağlama</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="content-section">
+                    <h2 class="content-title" data-tr="Eğitim" data-en="Education">Eğitim</h2>
+
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-title" data-tr="Görsel İletişim Tasarım - Lisans" data-en="Visual Communication Design - Bachelor's">Görsel İletişim Tasarım - Lisans</div>
+                                <div class="exp-company" data-tr="Dumlupınar Üniversitesi" data-en="Dumlupinar University">Dumlupınar Üniversitesi</div>
+                            </div>
+                            <div class="exp-date">2019 - 2022</div>
+                        </div>
+                        <div class="exp-description">
+                            <ul>
+                                <li data-tr="Grafik tasarım, tipografi, marka kimliği ve görsel iletişim prensipleri" data-en="Graphic design, typography, brand identity and visual communication principles">Grafik tasarım, tipografi, marka kimliği ve görsel iletişim prensipleri</li>
+                                <li data-tr="Graffiti sanatı ve tasarım uzmanlığı" data-en="Graffiti art and design expertise">Graffiti sanatı ve tasarım uzmanlığı</li>
+                                <li data-tr="Dijital ve baskı medya tasarımı projeleri" data-en="Digital and print media design projects">Dijital ve baskı medya tasarımı projeleri</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <p data-tr="Daha fazla çalışmam için portfolyomu ziyaret edin" data-en="Visit my portfolio for more of my work">Daha fazla çalışmam için portfolyomu ziyaret edin</p>
+            <a href="https://bedirhhantunc.github.io/portfolio-website/" target="_blank" rel="noopener noreferrer" class="portfolio-link" aria-label="View my portfolio website">
+                <span data-tr="🌐 Portfolio'yu Görüntüle" data-en="🌐 View Portfolio" aria-hidden="true">🌐 Portfolio'yu Görüntüle</span>
+            </a>
+        </footer>
+    </div>
+
+    <script>
+        // Current language and theme
+        let currentLang = 'tr';
+        let currentColorTheme = 'blue';
+
+        // PDF Download Function
+        function downloadPDF() {
+            window.print();
+        }
+
+        // Ripple Effect Function
+        function createRipple(event) {
+            const button = event.currentTarget;
+            const ripple = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+
+            button.appendChild(ripple);
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        // Add ripple effect to all buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.toggle-btn, .color-toggle-btn, .pdf-btn, .portfolio-link');
+            buttons.forEach(button => {
+                button.addEventListener('click', createRipple);
+            });
+        });
+
+        // Toggle Color Picker Dropdown
+        function toggleColorPicker() {
+            const colorPicker = document.getElementById('colorPicker');
+            const colorBtn = document.querySelector('.color-toggle-btn');
+            const isOpen = colorPicker.classList.toggle('show');
+            colorBtn.setAttribute('aria-expanded', isOpen);
+        }
+
+        // Close color picker when clicking outside
+        document.addEventListener('click', function(event) {
+            const colorPickerContainer = document.querySelector('.color-picker-container');
+            const colorPicker = document.getElementById('colorPicker');
+            const colorBtn = document.querySelector('.color-toggle-btn');
+
+            if (colorPickerContainer && !colorPickerContainer.contains(event.target)) {
+                colorPicker.classList.remove('show');
+                colorBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Color Theme Changer
+        function changeTheme(theme) {
+            const body = document.body;
+
+            // Remove all theme classes
+            body.classList.remove('theme-blue', 'theme-green', 'theme-purple', 'theme-red');
+
+            // Add new theme class (blue is default, no class needed)
+            if (theme !== 'blue') {
+                body.classList.add('theme-' + theme);
+            }
+
+            // Update active state on color options
+            document.querySelectorAll('.color-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            document.querySelector(`.color-option.${theme}`).classList.add('active');
+
+            currentColorTheme = theme;
+            localStorage.setItem('colorTheme', theme);
+
+            // Close the dropdown after selection
+            document.getElementById('colorPicker').classList.remove('show');
+            document.querySelector('.color-toggle-btn').setAttribute('aria-expanded', 'false');
+        }
+
+        // Language Toggle
+        function toggleLanguage() {
+            currentLang = currentLang === 'tr' ? 'en' : 'tr';
+            const langBtn = document.getElementById('lang-btn');
+            const htmlRoot = document.getElementById('html-root');
+
+            langBtn.textContent = currentLang === 'tr' ? 'EN' : 'TR';
+            langBtn.setAttribute('aria-label', currentLang === 'tr' ? 'Switch language to English' : 'Dili Türkçe\'ye çevir');
+            htmlRoot.setAttribute('lang', currentLang);
+
+            // Update all elements with language data
+            const elements = document.querySelectorAll('[data-tr][data-en]');
+            elements.forEach(el => {
+                el.textContent = el.getAttribute('data-' + currentLang);
+            });
+
+            localStorage.setItem('language', currentLang);
+        }
+
+        // Dark Mode Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeBtn = document.getElementById('theme-toggle-btn');
+
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.textContent = '☀️';
+                themeBtn.setAttribute('aria-label', 'Switch to light mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.textContent = '🌙';
+                themeBtn.setAttribute('aria-label', 'Switch to dark mode');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Scroll Animation Observer
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animatable elements
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Load saved preferences
+        window.addEventListener('load', function() {
+            // Load color theme
+            const savedColorTheme = localStorage.getItem('colorTheme');
+            if (savedColorTheme) {
+                changeTheme(savedColorTheme);
+            }
+
+            // Load dark/light theme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-icon').textContent = '☀️';
+                document.getElementById('theme-toggle-btn').setAttribute('aria-label', 'Switch to light mode');
+            }
+
+            // Load language
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && savedLang !== 'tr') {
+                currentLang = savedLang;
+                document.getElementById('lang-btn').textContent = 'TR';
+
+                const elements = document.querySelectorAll('[data-tr][data-en]');
+                elements.forEach(el => {
+                    el.textContent = el.getAttribute('data-en');
+                });
+            }
+
+            // Animate skill bars
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+
+            // Initialize scroll animations
+            initScrollAnimations();
+
+            // Add initial fade-in animation to main sections
+            setTimeout(() => {
+                document.querySelectorAll('.content-section, .experience-card, .stat-card').forEach((el, index) => {
+                    el.classList.add('animate-on-scroll');
+                    setTimeout(() => {
+                        el.classList.add('animated');
+                    }, index * 100);
+                });
+            }, 200);
+        });
+
+        // Ensure correct language is shown when printing
+        window.addEventListener('beforeprint', function() {
+            // Update all elements to current language before printing
+            const elements = document.querySelectorAll('[data-tr][data-en]');
+            elements.forEach(el => {
+                el.textContent = el.getAttribute('data-' + currentLang);
+            });
+        });
+    </script>
+</body>
+</html>
