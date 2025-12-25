@@ -778,18 +778,14 @@
         @media print {
             html, body {
                 width: 210mm;
-                height: 297mm;
+                height: auto;
                 margin: 0;
                 padding: 0;
-                overflow: hidden;
             }
 
             body {
                 padding: 0 !important;
                 background: white !important;
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
             }
 
             .toggle-buttons {
@@ -802,14 +798,12 @@
                 margin: 0 !important;
                 box-shadow: none !important;
                 border-radius: 0 !important;
-                transform: scale(0.68);
+                transform: scale(0.75);
                 transform-origin: top center;
-                page-break-inside: avoid;
             }
 
             .header {
                 padding: 30px 35px !important;
-                page-break-inside: avoid;
             }
 
             .header::before,
@@ -918,8 +912,7 @@
             }
 
             .content-section {
-                margin-bottom: 30px !important;
-                page-break-inside: avoid;
+                margin-bottom: 25px !important;
             }
 
             .content-title {
@@ -936,7 +929,6 @@
             .experience-card {
                 padding: 20px !important;
                 margin-bottom: 18px !important;
-                page-break-inside: avoid;
             }
 
             .experience-card::after {
