@@ -61,48 +61,6 @@
             --gradient-main: linear-gradient(90deg, #2d3436, #0984e3);
         }
 
-        /* Green Theme */
-        body.theme-green {
-            --primary-dark: #27ae60;
-            --primary-blue: #2ecc71;
-            --primary-light: #55efc4;
-            --accent-blue: #00b894;
-
-            --bg-body: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            --bg-header: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            --bg-summary: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
-            --bg-stat: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            --gradient-main: linear-gradient(90deg, #27ae60, #2ecc71);
-        }
-
-        /* Purple Theme */
-        body.theme-purple {
-            --primary-dark: #6c5ce7;
-            --primary-blue: #a29bfe;
-            --primary-light: #dfe6e9;
-            --accent-blue: #5f27cd;
-
-            --bg-body: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-            --bg-header: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-            --bg-summary: linear-gradient(135deg, #f5f3ff 0%, #e5d9f2 100%);
-            --bg-stat: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-            --gradient-main: linear-gradient(90deg, #6c5ce7, #a29bfe);
-        }
-
-        /* Red Theme */
-        body.theme-red {
-            --primary-dark: #d63031;
-            --primary-blue: #ff7675;
-            --primary-light: #fab1a0;
-            --accent-blue: #e17055;
-
-            --bg-body: linear-gradient(135deg, #d63031 0%, #ff7675 100%);
-            --bg-header: linear-gradient(135deg, #d63031 0%, #ff7675 100%);
-            --bg-summary: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
-            --bg-stat: linear-gradient(135deg, #d63031 0%, #ff7675 100%);
-            --gradient-main: linear-gradient(90deg, #d63031, #ff7675);
-        }
-
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -211,93 +169,6 @@
             align-items: center;
         }
 
-        /* Color Theme Picker - Minimalist Design */
-        .color-picker-container {
-            position: relative;
-        }
-
-        .color-toggle-btn {
-            background: var(--bg-card);
-            border: 2px solid var(--primary-blue);
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: var(--primary-blue);
-        }
-
-        .color-toggle-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(9, 132, 227, 0.4);
-            background: var(--primary-blue);
-            color: white;
-        }
-
-        .color-toggle-btn:active {
-            transform: scale(0.95);
-        }
-
-        .color-picker {
-            position: absolute;
-            top: 55px;
-            right: 0;
-            display: none;
-            flex-direction: column;
-            gap: 8px;
-            background: var(--bg-card);
-            padding: 10px;
-            border-radius: 15px;
-            border: 2px solid var(--primary-blue);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-        }
-
-        .color-picker.show {
-            display: flex;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .color-option {
-            width: 35px;
-            height: 35px;
-            border-radius: 10px;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .color-option:hover {
-            transform: scale(1.1);
-            border-color: rgba(255,255,255,0.5);
-        }
-
-        .color-option.active::after {
-            content: '✓';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .color-option.blue { background: linear-gradient(135deg, #2d3436, #0984e3); }
-        .color-option.green { background: linear-gradient(135deg, #27ae60, #2ecc71); }
-        .color-option.purple { background: linear-gradient(135deg, #6c5ce7, #a29bfe); }
-        .color-option.red { background: linear-gradient(135deg, #d63031, #ff7675); }
-
         /* Toggle Button Base Style */
         .toggle-btn {
             background: var(--bg-card);
@@ -320,8 +191,6 @@
         }
 
         .toggle-btn,
-        .color-toggle-btn,
-        .color-option,
         .experience-card,
         .stat-card,
         .tool-badge,
@@ -331,7 +200,6 @@
 
         /* Ripple Effect */
         .toggle-btn,
-        .color-toggle-btn,
         .pdf-btn,
         .portfolio-link {
             position: relative;
@@ -385,8 +253,7 @@
             box-shadow: 0 0 0 4px rgba(9, 132, 227, 0.2);
         }
 
-        .toggle-btn:focus-visible,
-        .color-toggle-btn:focus-visible {
+        .toggle-btn:focus-visible {
             outline: 3px solid var(--primary-light);
             outline-offset: 2px;
         }
@@ -953,19 +820,10 @@
                 gap: 8px;
             }
 
-            .toggle-btn, .color-toggle-btn {
+            .toggle-btn {
                 width: 45px;
                 height: 45px;
                 font-size: 18px;
-            }
-
-            .color-picker {
-                top: 50px;
-            }
-
-            .color-option {
-                width: 32px;
-                height: 32px;
             }
 
             .main-content {
@@ -1029,7 +887,7 @@
                 max-width: 120px;
             }
 
-            .toggle-btn, .color-toggle-btn, .pdf-btn {
+            .toggle-btn, .pdf-btn {
                 width: 40px;
                 height: 40px;
                 font-size: 16px;
@@ -1104,19 +962,6 @@
         <button class="toggle-btn pdf-btn" onclick="downloadPDF()" title="Download as PDF" aria-label="Download CV as PDF">
             <i class="fas fa-file-pdf" aria-hidden="true"></i>
         </button>
-
-        <!-- Color Theme Picker Dropdown -->
-        <div class="color-picker-container">
-            <button class="color-toggle-btn" onclick="toggleColorPicker()" title="Change Theme Color" aria-label="Change color theme" aria-expanded="false" aria-controls="colorPicker">
-                <i class="fas fa-palette" aria-hidden="true"></i>
-            </button>
-            <div class="color-picker" id="colorPicker" role="menu" aria-label="Color theme options">
-                <button class="color-option blue active" onclick="changeTheme('blue')" title="Blue Theme" aria-label="Blue theme" role="menuitem"></button>
-                <button class="color-option green" onclick="changeTheme('green')" title="Green Theme" aria-label="Green theme" role="menuitem"></button>
-                <button class="color-option purple" onclick="changeTheme('purple')" title="Purple Theme" aria-label="Purple theme" role="menuitem"></button>
-                <button class="color-option red" onclick="changeTheme('red')" title="Red Theme" aria-label="Red theme" role="menuitem"></button>
-            </div>
-        </div>
 
         <!-- Language Button -->
         <button class="toggle-btn lang-toggle" onclick="toggleLanguage()" id="lang-btn" title="Change Language" aria-label="Switch language to English">EN</button>
@@ -1356,9 +1201,8 @@
     </div>
 
     <script>
-        // Current language and theme
+        // Current language
         let currentLang = 'tr';
-        let currentColorTheme = 'blue';
 
         // PDF Download Function
         function downloadPDF() {
@@ -1388,57 +1232,11 @@
 
         // Add ripple effect to all buttons
         document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('.toggle-btn, .color-toggle-btn, .pdf-btn, .portfolio-link');
+            const buttons = document.querySelectorAll('.toggle-btn, .pdf-btn, .portfolio-link');
             buttons.forEach(button => {
                 button.addEventListener('click', createRipple);
             });
         });
-
-        // Toggle Color Picker Dropdown
-        function toggleColorPicker() {
-            const colorPicker = document.getElementById('colorPicker');
-            const colorBtn = document.querySelector('.color-toggle-btn');
-            const isOpen = colorPicker.classList.toggle('show');
-            colorBtn.setAttribute('aria-expanded', isOpen);
-        }
-
-        // Close color picker when clicking outside
-        document.addEventListener('click', function(event) {
-            const colorPickerContainer = document.querySelector('.color-picker-container');
-            const colorPicker = document.getElementById('colorPicker');
-            const colorBtn = document.querySelector('.color-toggle-btn');
-
-            if (colorPickerContainer && !colorPickerContainer.contains(event.target)) {
-                colorPicker.classList.remove('show');
-                colorBtn.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        // Color Theme Changer
-        function changeTheme(theme) {
-            const body = document.body;
-
-            // Remove all theme classes
-            body.classList.remove('theme-blue', 'theme-green', 'theme-purple', 'theme-red');
-
-            // Add new theme class (blue is default, no class needed)
-            if (theme !== 'blue') {
-                body.classList.add('theme-' + theme);
-            }
-
-            // Update active state on color options
-            document.querySelectorAll('.color-option').forEach(option => {
-                option.classList.remove('active');
-            });
-            document.querySelector(`.color-option.${theme}`).classList.add('active');
-
-            currentColorTheme = theme;
-            localStorage.setItem('colorTheme', theme);
-
-            // Close the dropdown after selection
-            document.getElementById('colorPicker').classList.remove('show');
-            document.querySelector('.color-toggle-btn').setAttribute('aria-expanded', 'false');
-        }
 
         // Language Toggle
         function toggleLanguage() {
@@ -1501,12 +1299,6 @@
 
         // Load saved preferences
         window.addEventListener('load', function() {
-            // Load color theme
-            const savedColorTheme = localStorage.getItem('colorTheme');
-            if (savedColorTheme) {
-                changeTheme(savedColorTheme);
-            }
-
             // Load dark/light theme
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
