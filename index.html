@@ -771,21 +771,29 @@
 
         /* Print Styles */
         @page {
-            margin: 0.5cm;
+            margin: 0;
             size: A4 portrait;
         }
 
         @media print {
-            html, body {
-                width: 210mm;
-                height: auto;
+            * {
                 margin: 0;
                 padding: 0;
             }
 
-            body {
+            html, body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0 !important;
                 padding: 0 !important;
+                overflow: hidden;
+            }
+
+            body {
                 background: white !important;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
             }
 
             .toggle-buttons {
@@ -793,181 +801,23 @@
             }
 
             .cv-container {
-                max-width: 100% !important;
-                width: 100% !important;
+                max-width: 1200px !important;
+                width: 1200px !important;
                 margin: 0 !important;
                 box-shadow: none !important;
                 border-radius: 0 !important;
-                transform: scale(0.75);
-                transform-origin: top center;
-            }
-
-            .header {
-                padding: 30px 35px !important;
+                transform: scale(0.48);
+                transform-origin: top left;
+                position: absolute;
+                left: 50%;
+                margin-left: -600px !important;
             }
 
             .header::before,
-            .header::after {
-                display: none !important;
-            }
-
-            .name {
-                font-size: 42px !important;
-                margin-bottom: 8px !important;
-            }
-
-            .tagline {
-                font-size: 20px !important;
-                margin-bottom: 20px !important;
-            }
-
-            .contact-grid {
-                gap: 10px !important;
-                margin-top: 20px !important;
-            }
-
-            .contact-item {
-                padding: 8px 15px !important;
-                font-size: 12px !important;
-            }
-
-            .contact-icon {
-                font-size: 16px !important;
-            }
-
-            .sidebar {
-                padding: 30px 25px !important;
-            }
-
-            .section-title {
-                font-size: 16px !important;
-                margin-bottom: 15px !important;
-                padding-bottom: 8px !important;
-            }
-
-            .skill-item {
-                margin-bottom: 15px !important;
-            }
-
-            .skill-name {
-                font-size: 13px !important;
-                margin-bottom: 6px !important;
-            }
-
-            .skill-bar {
-                height: 6px !important;
-            }
-
-            .skill-progress::after {
-                display: none !important;
-            }
-
-            .tool-grid {
-                gap: 8px !important;
-            }
-
-            .tool-badge {
-                padding: 8px 12px !important;
-                font-size: 11px !important;
-            }
-
-            .language-item {
-                padding: 8px 0 !important;
-            }
-
-            .language-name {
-                font-size: 13px !important;
-            }
-
-            .language-badge {
-                font-size: 10px !important;
-                padding: 3px 10px !important;
-            }
-
-            .tag {
-                padding: 6px 14px !important;
-                font-size: 11px !important;
-            }
-
-            .content-area {
-                padding: 30px 35px !important;
-            }
-
-            .stats-grid {
-                gap: 12px !important;
-                margin-bottom: 25px !important;
-            }
-
-            .stat-card {
-                padding: 15px 12px !important;
-            }
-
-            .stat-number {
-                font-size: 28px !important;
-                margin-bottom: 3px !important;
-            }
-
-            .stat-label {
-                font-size: 11px !important;
-            }
-
-            .content-section {
-                margin-bottom: 25px !important;
-            }
-
-            .content-title {
-                font-size: 22px !important;
-                margin-bottom: 18px !important;
-            }
-
-            .summary-box {
-                padding: 20px !important;
-                font-size: 13px !important;
-                line-height: 1.6 !important;
-            }
-
-            .experience-card {
-                padding: 20px !important;
-                margin-bottom: 18px !important;
-            }
-
+            .header::after,
+            .skill-progress::after,
             .experience-card::after {
                 display: none !important;
-            }
-
-            .exp-title {
-                font-size: 17px !important;
-                margin-bottom: 4px !important;
-            }
-
-            .exp-company {
-                font-size: 14px !important;
-            }
-
-            .exp-date {
-                padding: 4px 12px !important;
-                font-size: 11px !important;
-            }
-
-            .exp-description ul {
-                margin-top: 12px !important;
-            }
-
-            .exp-description li {
-                font-size: 12px !important;
-                line-height: 1.5 !important;
-                margin-bottom: 6px !important;
-            }
-
-            .footer {
-                padding: 20px !important;
-                font-size: 12px !important;
-            }
-
-            .portfolio-link {
-                padding: 8px 20px !important;
-                margin-top: 10px !important;
-                font-size: 12px !important;
             }
 
             *, *::before, *::after {
