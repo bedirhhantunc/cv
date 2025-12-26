@@ -771,73 +771,56 @@
 
         /* Print Styles */
         @page {
-            margin: 0;
             size: A4 portrait;
+            margin: 0;
         }
 
         @media print {
-            * {
-                margin: 0;
-                padding: 0;
-            }
-
-            html, body {
-                width: 210mm;
-                height: 297mm;
-                margin: 0 !important;
-                padding: 0 !important;
-                overflow: hidden;
-            }
-
-            body {
-                background: white !important;
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-            }
-
+            /* Hide toggle buttons */
             .toggle-buttons {
                 display: none !important;
             }
 
+            /* Remove body padding and set background to white */
+            body {
+                padding: 0 !important;
+                background: white !important;
+                margin: 0;
+            }
+
+            /* Scale the entire container to fit A4 */
             .cv-container {
-                max-width: 1200px !important;
-                width: 1200px !important;
-                margin: 0 !important;
-                box-shadow: none !important;
-                border-radius: 0 !important;
-                transform: scale(0.48);
-                transform-origin: top left;
-                position: absolute;
-                left: 50%;
-                margin-left: -600px !important;
+                transform: scale(0.58);
+                transform-origin: top center;
+                margin: 0 auto;
+                page-break-inside: avoid;
+                page-break-after: avoid;
+                page-break-before: avoid;
             }
 
-            .header::before,
-            .header::after,
-            .skill-progress::after,
-            .experience-card::after {
-                display: none !important;
+            /* Prevent page breaks inside elements */
+            .header,
+            .main-content,
+            .sidebar,
+            .content-area,
+            .content-section,
+            .experience-card,
+            .stats-grid,
+            .stat-card,
+            .footer {
+                page-break-inside: avoid !important;
+                page-break-after: avoid !important;
+                page-break-before: avoid !important;
             }
 
-            *, *::before, *::after {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                color-adjust: exact !important;
+            /* Disable animations */
+            * {
                 animation: none !important;
                 transition: none !important;
-                box-shadow: none !important;
             }
 
-            /* Force backgrounds to print */
-            .header,
-            .stat-card,
-            .sidebar,
-            .summary-box,
-            .skill-progress,
-            .language-badge,
-            .exp-date,
-            .portfolio-link {
+            /* Force all colors and backgrounds to print */
+            * {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
                 color-adjust: exact !important;
