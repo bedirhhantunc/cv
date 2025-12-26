@@ -772,7 +772,7 @@
         /* Print Styles */
         @page {
             size: A4 portrait;
-            margin: 0;
+            margin: 15mm;
         }
 
         @media print {
@@ -781,39 +781,29 @@
                 display: none !important;
             }
 
-            /* Remove body padding and set background to white */
+            /* Remove body padding and background */
             body {
                 padding: 0 !important;
                 background: white !important;
                 margin: 0;
             }
 
-            /* Scale the entire container to fit A4 */
+            /* Scale container to fit A4 width (210mm - 30mm margins = 180mm) */
             .cv-container {
-                transform: scale(0.58);
-                transform-origin: top center;
-                margin: 0 auto;
-                page-break-inside: avoid;
-                page-break-after: avoid;
-                page-break-before: avoid;
+                max-width: 180mm !important;
+                width: 180mm !important;
+                margin: 0 auto !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
             }
 
-            /* Prevent page breaks inside elements */
-            .header,
-            .main-content,
-            .sidebar,
-            .content-area,
-            .content-section,
+            /* Allow natural page breaks */
             .experience-card,
-            .stats-grid,
-            .stat-card,
-            .footer {
-                page-break-inside: avoid !important;
-                page-break-after: avoid !important;
-                page-break-before: avoid !important;
+            .content-section {
+                page-break-inside: avoid;
             }
 
-            /* Disable animations */
+            /* Disable animations and transitions */
             * {
                 animation: none !important;
                 transition: none !important;
@@ -824,6 +814,12 @@
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
                 color-adjust: exact !important;
+            }
+
+            /* Remove decorative elements that might cause issues */
+            .header::before,
+            .header::after {
+                display: none !important;
             }
         }
 
