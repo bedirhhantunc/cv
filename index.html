@@ -1250,7 +1250,31 @@
 
         // PDF Download Function
         function downloadPDF() {
-            window.print();
+            // Force all animations to complete before printing
+            const animatableElements = document.querySelectorAll('.animate-on-scroll');
+            animatableElements.forEach(el => {
+                el.classList.add('animated');
+            });
+
+            // Force all skill bars to show at full width
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.transition = 'none';
+                bar.style.width = targetWidth;
+            });
+
+            // Wait for all content to be fully rendered
+            setTimeout(() => {
+                window.print();
+
+                // Restore transitions after printing
+                setTimeout(() => {
+                    skillBars.forEach(bar => {
+                        bar.style.transition = '';
+                    });
+                }, 100);
+            }, 500);
         }
 
         // Ripple Effect Function
@@ -1393,6 +1417,31 @@
             const elements = document.querySelectorAll('[data-tr][data-en]');
             elements.forEach(el => {
                 el.textContent = el.getAttribute('data-' + currentLang);
+            });
+
+            // Force all animations to complete before printing
+            const animatableElements = document.querySelectorAll('.animate-on-scroll');
+            animatableElements.forEach(el => {
+                el.classList.add('animated');
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+
+            // Force all skill bars to show at full width
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                bar.style.transition = 'none';
+                const targetWidth = bar.getAttribute('style').match(/width:\s*(\d+%)/);
+                if (targetWidth) {
+                    bar.style.width = targetWidth[1];
+                }
+            });
+
+            // Force all cards and sections to be visible
+            const allSections = document.querySelectorAll('.content-section, .experience-card, .stat-card, .sidebar-section');
+            allSections.forEach(section => {
+                section.style.opacity = '1';
+                section.style.visibility = 'visible';
             });
         });
     </script>
