@@ -772,11 +772,11 @@
         /* Print Styles */
         @page {
             size: A4 portrait;
-            margin: 8mm;
+            margin: 5mm;
         }
 
         @media print {
-            /* Reset everything */
+            /* Force single page */
             html, body {
                 width: 210mm;
                 height: 297mm;
@@ -795,11 +795,11 @@
                 background: white !important;
             }
 
-            /* Scale entire CV to fit single A4 page with better proportions */
+            /* Scale entire CV to fit single A4 page - MUCH SMALLER */
             .cv-container {
                 width: 1200px !important;
                 max-width: 1200px !important;
-                transform: scale(0.635);
+                transform: scale(0.48);
                 transform-origin: top center;
                 margin: 0 auto !important;
                 position: absolute;
@@ -809,47 +809,73 @@
                 box-shadow: none !important;
             }
 
-            /* Reduce spacing for single page fit */
+            /* Dramatically reduce all spacing */
             .header {
-                padding: 40px 40px !important;
-            }
-
-            .sidebar {
                 padding: 35px 30px !important;
             }
 
+            .name {
+                font-size: 48px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .tagline {
+                font-size: 20px !important;
+                margin-bottom: 20px !important;
+            }
+
+            .contact-grid {
+                margin-top: 20px !important;
+                gap: 10px !important;
+            }
+
+            .sidebar {
+                padding: 30px 25px !important;
+            }
+
+            .sidebar-section {
+                margin-bottom: 30px !important;
+            }
+
             .content-area {
-                padding: 35px 40px !important;
+                padding: 30px 35px !important;
             }
 
             .stats-grid {
-                margin-bottom: 30px !important;
-                gap: 15px !important;
+                margin-bottom: 25px !important;
+                gap: 12px !important;
             }
 
             .content-section {
-                margin-bottom: 30px !important;
+                margin-bottom: 25px !important;
             }
 
             .experience-card {
-                margin-bottom: 20px !important;
-                padding: 25px !important;
+                margin-bottom: 15px !important;
+                padding: 20px !important;
             }
 
             .footer {
-                padding: 25px !important;
+                padding: 20px !important;
             }
 
-            /* Prevent ALL page breaks */
+            .summary-box {
+                padding: 20px !important;
+                margin-bottom: 20px !important;
+            }
+
+            /* Prevent ALL page breaks - ABSOLUTE */
             .cv-container,
             .header,
             .main-content,
             .sidebar,
             .content-area,
+            .footer,
             * {
                 page-break-inside: avoid !important;
                 page-break-after: avoid !important;
                 page-break-before: avoid !important;
+                break-inside: avoid !important;
             }
 
             /* Keep all backgrounds and gradients */
