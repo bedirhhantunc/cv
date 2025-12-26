@@ -772,53 +772,82 @@
         /* Print Styles */
         @page {
             size: A4 portrait;
-            margin: 15mm;
+            margin: 10mm;
         }
 
         @media print {
+            /* Reset everything */
+            html {
+                width: 100%;
+                height: 100%;
+            }
+
             /* Hide toggle buttons */
             .toggle-buttons {
                 display: none !important;
             }
 
-            /* Remove body padding and background */
+            /* Keep body background white for printing */
             body {
                 padding: 0 !important;
+                margin: 0 !important;
                 background: white !important;
-                margin: 0;
+                width: 100%;
+                height: auto;
             }
 
-            /* Scale container to fit A4 width (210mm - 30mm margins = 180mm) */
+            /* Scale and fit container to A4 width */
             .cv-container {
-                max-width: 180mm !important;
-                width: 180mm !important;
+                width: 1200px !important;
+                max-width: 1200px !important;
+                transform: scale(0.68);
+                transform-origin: top center;
                 margin: 0 auto !important;
+                position: relative;
+                left: 0;
                 box-shadow: none !important;
-                border-radius: 0 !important;
             }
 
-            /* Allow natural page breaks */
+            /* Keep all backgrounds and gradients */
+            .header,
+            .sidebar,
+            .summary-box,
+            .stat-card,
             .experience-card,
-            .content-section {
-                page-break-inside: avoid;
-            }
-
-            /* Disable animations and transitions */
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-
-            /* Force all colors and backgrounds to print */
-            * {
+            .skill-progress,
+            .language-badge,
+            .exp-date,
+            .tag,
+            .tool-badge,
+            .portfolio-link,
+            .footer {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
                 color-adjust: exact !important;
             }
 
-            /* Remove decorative elements that might cause issues */
+            /* Force all elements to print with colors */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                animation: none !important;
+                transition: none !important;
+            }
+
+            /* Prevent awkward page breaks */
+            .header,
+            .experience-card,
+            .stat-card,
+            .sidebar-section {
+                page-break-inside: avoid;
+            }
+
+            /* Remove decorative pseudo elements that might cause issues */
             .header::before,
-            .header::after {
+            .header::after,
+            .skill-progress::after,
+            .experience-card::after {
                 display: none !important;
             }
         }
